@@ -5,11 +5,11 @@ years = []
 co2 = []
 temp = []
 
-connection = sqlite3.connect(r"C:\\Users\\jas-w\Documents\\projects\\2810ICT\\Quiz\\Quiz_week_8\\climate.db")
+connection = sqlite3.connect(r"climate.db")
 cursor = connection.cursor()
 
 cursor.execute("SELECT*FROM ClimateData")
-result = cursor.fetchall() 
+result = cursor.fetchall()
 
 #Iterate through rows and append to lists
 for r in result:
